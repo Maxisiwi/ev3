@@ -28,3 +28,8 @@ CRUNCH
   [(9 9 → que la contraseña es de 9 caracteres) (^ → que va un simbolo) (% → numero) (, → letra mayúscula) (@ → letra minuscula)]  
   # crunch 9 9 -t 20879M@@@ > diccionario.txt  
   # john --wordlist=diccionario.txt hash.txt
+
+
+Identificador de cifrado:
+
+https://www.dcode.fr/identificador-cifrado
