@@ -1,0 +1,30 @@
+PDF
+  Crear un pdf con contraseña (Ej: crear un word y guardar con la extensión pdf habilitando la opción de scifrar con contraseña)
+ 
+  (Pasar pdf a maquina kali)
+  
+  [En terminal kali:]
+  # cp /usr/share/worldlists/rockyou.txt.gz /home/kali/Desktop
+  
+  Descomprimir
+  
+  # apt install pdfcrack  
+  # pdfcrack archivo.pdf -w rockyou.txt
+
+ZIP
+  Crear un zip cifrado con contraseña (seleccionar archivo → añadir al archivo...)
+  
+  Pasar a máquina Kali
+  
+  En terminal Kali:  
+  # zip2john archivo.zip
+  
+  Copiar lo mostrado y pasarlo a un hash.txt
+  
+  # john --wordlist=rockyou.txt hash.txt
+
+CRUNCH
+  [# crunch 9 9 -t 20879Maxi]  
+  [(9 9 → que la contraseña es de 9 caracteres) (^ → que va un simbolo) (% → numero) (, → letra mayúscula) (@ → letra minuscula)]  
+  # crunch 9 9 -t 20879M@@@ > diccionario.txt  
+  # john --wordlist=diccionario.txt hash.txt
