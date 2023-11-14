@@ -1,0 +1,27 @@
+- Escaneo de puertos → Se identifica cuando se hacen consultas a varios puertos diferentes.
+    
+    Tipos de escaneos:
+    
+    - TCP Full open scan:     
+        → syn
+        ← syn/ack
+        → ack      
+        → rst       
+    
+    - *TCP half open scan:*       
+        → syn        
+        ← syn/ack        
+        → rst        
+    
+    Filtro: ip.src_host == 10.10.1.3
+    
+- Identificar negociación DHCP
+    
+    Ej:   
+      0.0.0.0 DHCP Discover   
+      10.10.1.3 DHCP Offer    
+      0.0.0.0 DHCP Request    
+      10.10.1.3 DHCP ACK
+    
+- ¿Cúal es el tipo de ataque?    
+    A través de filtros buscar los servicios conocidos (Ej: http) y buscar algún paquete extraño y extraerlo o abrirlo. Luego, identificar el tipo de ataque buscando palabras claves.
