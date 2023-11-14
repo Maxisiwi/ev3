@@ -1,0 +1,34 @@
+[despues de descargar y extraer ossec...(service/packet)]
+
+  # apt update  
+  # apt install libpcre2-dev zlib1g-dev   
+  # PCRE2_SYSTEM=yes  
+  # apt-get install libssl-dev openssl  
+  # apt install libsystemd-dev
+  
+  # cd /home/usuario/Descargas  
+  # cd ossec-hids 
+  # ./install.sh
+
+  Iniciar ossec:
+  # /var/ossec/bin/ossec-control start
+  # /var/ossec/bin/manage_agents
+    A -> Agregar un agente
+    Nombre del agente (Windows)
+    IP del agente (Windows)
+    E -> Para extraer la llave
+  Copiar y guardar la llave en un txt en la carpeta descargas y levantar el sevicio apache:
+  # python3 -m http.server 80
+
+  # tail -f /var/ossec/logs/alerts/alerts.log
+
+En el agente...
+  Descargar el Ossec agent, ejecutarlo e instalarlo
+  Poner la direccion IP del Servidor
+  Copiar la llave desde el txt descargado de apache
+
+  Buscar "Directiva de seguridad local"
+    -> Directivas locales
+    -> Directiva de Auditoria
+    -> Auditar eventos de Inicio de Sesión
+        Seleccionar Erróneo, guardar y aplicar.
